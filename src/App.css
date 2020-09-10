@@ -1,0 +1,49 @@
+.timer{
+    display: flex;
+    float:right;
+    padding-right:20px;
+    padding-bottom: 5px;
+    justify-content: space-between;
+}
+.paused {
+    background-color: #e6e6e6;
+    color: #e6e6e6;
+    opacity: 0.5;
+}
+.container_parent
+{
+    padding-top: 1%;
+}
+.form-group
+{
+    padding: 0px 15px 0px 15px;
+}
+
+
+
+
+/*media queries*/
+/*desktop */
+@media (min-width:1025px)
+{
+  .container_parent{
+    padding: 1% 30% 0% 30%;
+
+  }
+  .Board{
+      height: 75vh!important;
+  }
+  .buttons_container
+  {
+      display: none!important;
+  }
+  
+}
+
+@media (min-width:481px) and (max-width:767px)
+{
+    body{
+        background-color: red;
+    }
+    
+}

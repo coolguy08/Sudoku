@@ -1,0 +1,31 @@
+.buttons{
+    color: grey;
+}
+.MuiButton-label
+{
+    flex-direction: inherit;
+    
+}
+.button_container:active,.buttons:active{
+color:green
+}
+.button_container
+{
+    flex-direction: column;
+    outline: none!important;
+    min-width: fit-content!important;
+    line-height: normal!important;
+    padding:2px!important;
+    text-transform: none!important;
+}
+.button_container p{
+    font-size:0.8em;
+}
+.controls_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top:3px;
+}

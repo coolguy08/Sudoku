@@ -1,0 +1,14 @@
+.winner_container
+{
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+.winner_container  .card
+{  
+    border:5px solid gold;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    text-align: center;
+}

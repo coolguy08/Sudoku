@@ -1,0 +1,68 @@
+.Board{
+    border:2px solid black;
+    width:100%;
+    height:50vh;
+    box-shadow: 0px 0px 8px 2px grey;
+
+}
+td:empty::after{
+    content: "\00a0\00a0";
+}
+.board_container{
+    width:100%;
+    padding:0px 15px 0px 15px;
+    
+}
+
+.not_set{
+    /* height: 12.5%;
+    width:12.8% */
+}
+
+
+
+.Board tr{
+  border:1px solid lightblue!important;
+  
+}
+.Board tr td{
+    /* padding:10px; */
+    text-align: center;
+    border:1px solid lightblue!important;
+    font-size:1.4em;
+    font-family:fantasy;
+   
+}
+
+.Board tr:nth-child(3n){
+    border-bottom:2px solid black!important;
+  }
+  .Board tr td:nth-child(3n){
+    border-right:2px solid black!important;
+  }
+
+.cannotchange{
+    background-color:#e6e6e6;
+}
+.canchange{
+    background-color: lightblue;
+}
+.danger{
+    color: red;
+}
+
+
+.twinkle_cell{
+    animation-name:twinkle;
+    animation-delay: 1.0;
+    animation-duration:1.2s;
+    transition: ease;
+}
+/*Animation for board*/
+@keyframes twinkle
+{
+    0%{transform:scale(1.0)}
+    50%{transform:scale(1.08);
+        }
+    
+}
