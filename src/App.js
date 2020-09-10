@@ -101,7 +101,7 @@ function App() {
       {
         let element=document.getElementById(`${pos[0]},${i}`);
         
-        if(element.className!="cannotchange")
+        if(!element.className.includes("cannotchange"))
         {
           if(!element.className.includes('danger'))
            {element.className+=" danger";}
@@ -111,7 +111,7 @@ function App() {
       else if(isvalid(copysudoku,copysudoku[pos[0]][i],[pos[0],i]) && i!=pos[1] && copysudoku[pos[0]][i]!=0)
       {
         let element=document.getElementById(`${pos[0]},${i}`);
-        if(element.className!="cannotchange")
+        if(!element.className.includes("cannotchange"))
         {
           if(element.className.includes('danger'))
           {element.className="not_set"}
@@ -127,7 +127,7 @@ function App() {
       {
         let element=document.getElementById(`${i},${pos[1]}`);
         
-        if(element.className!="cannotchange")
+        if(!element.className.includes("cannotchange"))
         {
           if(!element.className.includes('danger'))
            {element.className+=" danger";}
@@ -137,7 +137,7 @@ function App() {
       else if(isvalid(copysudoku,copysudoku[i][pos[1]],[i,pos[1]]) && i!=pos[0] && copysudoku[i][pos[1]]!=0)
       {
         let element=document.getElementById(`${i},${pos[1]}`);
-        if(element.className!="cannotchange")
+        if(!element.className.includes("cannotchange"))
         {
           if(element.className.includes('danger'))
           {element.className="not_set"}
@@ -157,7 +157,7 @@ function App() {
         {
           let element=document.getElementById(`${i},${j}`);
           console.log(element);
-          if(element.className!="cannotchange")
+          if(!element.className.includes("cannotchange"))
           {
             if(!element.className.includes('danger'))
              {element.className+=" danger";}
@@ -166,7 +166,7 @@ function App() {
         else if(isvalid(copysudoku,copysudoku[i],[j],[i,j]) && i!=pos[0] && j!=pos[1] && copysudoku[i][j]!=0)
         {
           let element=document.getElementById(`${i},${j}`);
-          if(element.className!="cannotchange")
+          if(!element.className.includes("cannotchange"))
           {
             if(element.className.includes('danger'))
             {element.className="not_set"}
@@ -335,7 +335,7 @@ function App() {
       const on_game_selected=(e)=>
       {  
         //reload on gametype change
-        window.location.pathname=e.target.value;
+        window.location.pathname=window.location.pathname.split('/')[1]+e.target.value;
       }
       
        //for seprating filled and not filled sudoku values
@@ -369,7 +369,10 @@ function App() {
 //for generating code for game type
   
   const type=(name)=>
-  { let t=name.slice(1);
+  { let t 
+    
+        t=name;
+     
   if(diff[t])
   {
     return diff[t]; 
@@ -383,7 +386,8 @@ function App() {
   }
 //for render on every new game
    useEffect(() => {
-    let game_type=window.location.pathname;
+    let game_type=window.location.pathname.split('/').pop();
+    console.log(type(game_type));
     let temp=sudoku(type(game_type));
     
     setsudoku(temp[0])
@@ -422,7 +426,7 @@ function App() {
      winner?<Winner time={`${min}:${sec}`} path_to_newgame={window.location.pathname}/> :
      
      <div className="container_parent">
-      <Gametype on_game_selected={on_game_selected} selected_option={type(window.location.pathname)}/>
+      <Gametype on_game_selected={on_game_selected} selected_option={type(window.location.pathname.split('/').pop())}/>
        <Timer 
        sec={sec} 
        min={min} 
