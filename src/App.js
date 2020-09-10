@@ -369,9 +369,9 @@ function App() {
 //for generating code for game type
   
   const type=(name)=>
-  { let t 
+  { 
     
-        t=name;
+        let t=name.slice(1);
      
   if(diff[t])
   {
