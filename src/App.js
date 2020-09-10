@@ -335,7 +335,7 @@ function App() {
       const on_game_selected=(e)=>
       {  
         //reload on gametype change
-        window.location.pathname=window.location.pathname.split('/')[1]+e.target.value;
+        window.location.pathname=e.target.value;
       }
       
        //for seprating filled and not filled sudoku values
@@ -386,7 +386,7 @@ function App() {
   }
 //for render on every new game
    useEffect(() => {
-    let game_type=window.location.pathname.split('/').pop();
+    let game_type=window.location.pathname;
     console.log(type(game_type));
     let temp=sudoku(type(game_type));
     
@@ -426,7 +426,7 @@ function App() {
      winner?<Winner time={`${min}:${sec}`} path_to_newgame={window.location.pathname}/> :
      
      <div className="container_parent">
-      <Gametype on_game_selected={on_game_selected} selected_option={type(window.location.pathname.split('/').pop())}/>
+      <Gametype on_game_selected={on_game_selected} selected_option={type(window.location.pathname)}/>
        <Timer 
        sec={sec} 
        min={min} 
