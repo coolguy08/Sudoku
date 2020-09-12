@@ -1,9 +1,58 @@
+.game_select
+{
+    color:lightseagreen
+}
+
+
 .timer{
     display: flex;
     float:right;
     padding-right:20px;
     padding-bottom: 5px;
     justify-content: space-between;
+    color:lightseagreen
+}
+.help{
+    display: none;
+    float:left;
+    padding-left:20px;
+    padding-bottom: 5px;
+    justify-content: space-between;
+}
+.tooltiphelp
+{
+    position: relative;
+    display: none;
+    
+    
+
+}
+.tooltiphelp .tooltiptext
+{
+    visibility: hidden;
+    width: 170px;
+    background-color: lightseagreen;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left:110%
+}
+.tooltiphelp .tooltiptext::after{
+    content:"";
+    position: absolute;
+    top: 22%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent lightseagreen transparent transparent;
+}
+.tooltiphelp:hover .tooltiptext{
+    visibility: visible;
 }
 .paused {
     background-color: #e6e6e6;
@@ -16,9 +65,12 @@
 }
 .form-group
 {
-    padding: 0px 15px 0px 15px;
+    padding: 10px 15px 0px 15px;
 }
-
+.controls_container
+  {
+      color:lightseagreen
+  }
 
 
 
@@ -37,13 +89,31 @@
   {
       display: none!important;
   }
+  .controls_container
+  {
+      display: none!important;
+  }
+  .timer
+  {
+      padding-bottom: 10px;
+  }
+  .help{
+   display: flex;
+  }
+  .tooltiphelp{
+      display: inline-block;
+  }
   
 }
 
-@media (min-width:481px) and (max-width:767px)
+@media (min-width:481px) and (max-width:900px)
 {
-    body{
-        background-color: red;
+    .container_parent{
+        padding: 1% 12% 0% 12%;
+    
+      }
+    .Board{
+        height: 65vh!important;
     }
     
 }

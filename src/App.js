@@ -78,7 +78,7 @@ function App() {
 
           let element=document.getElementById(`${x},${y}`);
           element.className+=" canchange"
-      if(copysudoku[x][y]==0)
+      if(copysudoku[x][y]==0 || !element.className.includes('cannotchange'))
       {
         setposition([x,y])
       }
@@ -231,6 +231,7 @@ function App() {
       {
         settimer_pause(!timer_pause)
         setbutton_status(!button_status)
+        return
       }
       if(position!=null && copysudoku[position[0]][position[1]]!=0)
       { let copy=deep_copy(copysudoku);
@@ -249,6 +250,7 @@ function App() {
       {
         settimer_pause(!timer_pause)
         setbutton_status(!button_status)
+        return
       }
       if(position!=null && copysudoku[position[0]][position[1]]!=suresult[position[0]][position[1]])
       { let copy=deep_copy(copysudoku);
@@ -266,6 +268,7 @@ function App() {
       {
         settimer_pause(!timer_pause)
         setbutton_status(!button_status)
+        return
       }
       let last_opr=stack.pop();
       
@@ -445,6 +448,9 @@ function App() {
        move_cell={move_cell}
        setmoveposition={setmoveposition}
        timer_pause={timer_pause}
+       on_click_undo={on_click_undo}
+       on_click_erase={on_click_erase}
+       on_click_hint={on_click_hint}
        />
       <Controls 
       on_click_erase={on_click_erase}

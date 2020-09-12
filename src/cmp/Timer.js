@@ -1,6 +1,8 @@
 import React from 'react'
 import PauseIcon from '@material-ui/icons/Pause'
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
+import InfoIcon from '@material-ui/icons/Info'
+
 function Timer({sec,min,setsec,setmin,timer_pause,settimer_pause,setbutton_status,button_status}) {
     
     
@@ -44,12 +46,21 @@ function Timer({sec,min,setsec,setmin,timer_pause,settimer_pause,setbutton_statu
     setbutton_status(!button_status)
     }
     return (
+        <div>
+        <div className="help tooltiphelp"><InfoIcon style={{color:'lightseagreen'}}/>
+        <span className="tooltiptext">
+            Undo - press Ctrl+Z<br/>
+            Erase -press 0<br/>
+            Hint - press Shift+H<br/>
+        </span>
+        </div>
         <div className="timer">
             {format_timer(`${min}:${sec}`)}
             {timer_pause?<PlayArrowIcon onClick={togglepause}/>:<PauseIcon onClick={togglepause}/>}
 
             {timer_pause?'':timer_start()}
             
+        </div>
         </div>
     )
 }

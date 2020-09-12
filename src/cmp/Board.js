@@ -2,7 +2,22 @@ import React, { useEffect } from 'react';
 import './css/Board.css';
 
 
-function Board({onbutton_click,setposition,sudoku,copysudoku,setbutton_status,move_cell,setmoveposition,timer_pause}) {
+function Board(
+    {
+    //destructuring props
+    onbutton_click,
+    setposition,
+    copysudoku,
+    setbutton_status,
+    move_cell,
+    setmoveposition,
+    timer_pause,
+    on_click_undo,
+    on_click_erase,
+    on_click_hint
+
+    }
+                ) {
    
     const key_pressed=(e)=>{
         
@@ -20,6 +35,22 @@ function Board({onbutton_click,setposition,sudoku,copysudoku,setbutton_status,mo
             
             move_cell(e.keyCode);
         }
+        else if(e.keyCode===90)
+        {
+            //undo call on ctrl+z
+            on_click_undo();
+        }
+        else if(e.keyCode===96)
+        {
+            //erase call on press 0
+            on_click_erase();
+        }
+        else if(e.keyCode===72)
+        {
+            //call hint on shift+h
+            on_click_hint();
+        }
+       // console.log(e);
 
 
        

@@ -1,25 +1,30 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Sudoku",
+  "name": "Sudoku",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "sudoku.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "sudoku192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "sudoku256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "sudoku512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#4bb3ab",
   "background_color": "#ffffff"
 }
