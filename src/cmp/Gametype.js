@@ -2,9 +2,7 @@ import React from 'react'
 
 function Gametype({on_game_selected,selected_option}) {
 
-
-    
-    return (
+return (
        
         
         <div className='form-group'>

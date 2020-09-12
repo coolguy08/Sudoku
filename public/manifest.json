@@ -7,11 +7,7 @@
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
-    {
-      "src": "sudoku192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
+    
     {
       "src": "sudoku256.png",
       "type": "image/png",
@@ -25,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#4bb3ab",
+  "theme_color": "#8ff0f0",
   "background_color": "#ffffff"
 }

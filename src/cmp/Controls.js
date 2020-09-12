@@ -6,7 +6,7 @@ import NotListedLocationIcon from '@material-ui/icons/NotListedLocation';
 import './css/controls.css';
 
 function Controls({on_click_erase,on_click_undo,on_click_hint}) {
-    const col="lightseagreen";
+    
     return (
         <div className="controls_container">
             <Button onClick={on_click_undo} style={{color:'inherit'}} className="button_container">

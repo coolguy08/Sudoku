@@ -223,7 +223,21 @@ function App() {
       
     }
   }
+     
+    //for removing undo position from stack on erase click
+    const remove_stack=()=>
+    {
+      for(let i=0;i<stack.length;i++)
+      {
+        if(stack[i].pos[0]==position[0] && stack[i].pos[1]==position[1])
+        {
+          stack.splice(i,1);
+          i--;
+        }
 
+      }
+
+    }
     //for erasing the cell
     const on_click_erase=()=>
     {
@@ -240,7 +254,7 @@ function App() {
         if(element.className.includes('danger'))
         {element.className="canchange";}
         setcopysudoku(copy);
-
+        remove_stack();
       }
     }
 
