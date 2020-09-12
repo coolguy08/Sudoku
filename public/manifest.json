@@ -9,9 +9,9 @@
     },
     
     {
-      "src": "sudoku256.png",
+      "src": "sudoku192.png",
       "type": "image/png",
-      "sizes": "256x256"
+      "sizes": "192x192"
     },
     {
       "src": "sudoku512.png",
