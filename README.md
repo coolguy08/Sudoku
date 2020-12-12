@@ -3,6 +3,8 @@
 ## Sudoku
 
 In the project directory, you can run:
+##Demo 
+https://sudoku-luv.herokuapp.com/
 
 ### `yarn start`
 
