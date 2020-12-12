@@ -1,10 +1,11 @@
 
 
 ## Sudoku
-
-In the project directory, you can run:
-##Demo 
+## Demo 
 https://sudoku-luv.herokuapp.com/
+  
+In the project directory, you can run:
+
 
 ### `yarn start`
 
